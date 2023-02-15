@@ -33,15 +33,24 @@ public class HelloController implements Initializable {
                 columna = GridPane.getColumnIndex(node);
                 fila = GridPane.getRowIndex(node);
             }
+        }*/
+        boolean encontrado=false;
+        for (int i=0; i< mainGrid.getChildren().size()  && !encontrado;i++) {
+            Node node = mainGrid.getChildren().get(i);
+            if (node.getBoundsInParent().contains(mouseEvent.getSceneX(), mouseEvent.getSceneY())) {
+                columna = GridPane.getColumnIndex(node);
+                fila = GridPane.getRowIndex(node);
+                encontrado = true;
+            }
         }
-        System.out.println(fila+" "+columna);*/
+        System.out.println(fila+" "+columna);
         //Otra forma
-        Node node = (Node) mouseEvent.getTarget();
+        /*Node node = (Node) mouseEvent.getTarget();
         if (node != null && node.getBoundsInParent().contains(mouseEvent.getSceneX(), mouseEvent.getSceneY())) {
             columna = GridPane.getColumnIndex(node);
             fila = GridPane.getRowIndex(node);
             System.out.println("Row : " + fila + ", Col : " + columna);
-        }
+        }*/
     }
 
     @Override
@@ -57,7 +66,7 @@ public class HelloController implements Initializable {
                 }
                 if (i == j) {
                     //addAll vs add
-                    pane.getChildren().addAll(new ImageView(new Image("File:src/main/resources/com/example/ej3gridimageview/imagenes/CaballoNegro.png")));
+                    pane.getChildren().add(new ImageView(new Image("File:src/main/resources/com/example/ej3gridimageview/imagenes/CaballoBlanco.png")));
                 }
                 mainGrid.add(pane, j, i);
             }
