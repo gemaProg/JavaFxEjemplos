@@ -13,10 +13,9 @@ import java.util.ResourceBundle;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Locale.setDefault(Locale.ENGLISH);
+        //Locale.setDefault(Locale.ENGLISH);
         ResourceBundle resourceBundle = ResourceBundle.getBundle("mensajes");
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"), resourceBundle);
-
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(root, 320, 340);
         stage.setTitle(resourceBundle.getString("titulo"));
