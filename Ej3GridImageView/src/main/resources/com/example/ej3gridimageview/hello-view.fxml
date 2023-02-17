@@ -4,9 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="510.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.ej3gridimageview.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ej3gridimageview.HelloController">
     <children>
-        <GridPane fx:id="mainGrid" alignment="CENTER" onMouseClicked="#click" prefHeight="550.0" prefWidth="510.0">
+        <!--onMouseClicked="#click" en GridPane o listener en cada pane 8x8 en el controller con java-->
+        <GridPane fx:id="mainGrid" alignment="CENTER" prefHeight="550.0" prefWidth="510.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
