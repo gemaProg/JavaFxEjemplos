@@ -1,4 +1,4 @@
-package com.example.javafxfaker2;
+package com.example.dataFakerGenerator;
 
 
 import javafx.fxml.FXML;
