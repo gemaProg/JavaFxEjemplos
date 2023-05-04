@@ -2,6 +2,7 @@ package ui;
 
 import dao.DaoAnimales;
 import domain.modelo.Animal;
+import javafx.scene.control.*;
 import servicios.ServiciosAnimales;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
@@ -10,65 +11,46 @@ import io.github.palexdev.materialfx.controls.MFXToggleButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class PrincipalController implements Initializable {
 
-    private ServiciosAnimales sa;
     private final MainViewModel viewModel;
-
     @FXML
     private AnchorPane anchorPane;
-
     @FXML
     private MFXButton botonAdd;
-
     @FXML
     private MFXButton botonDelete;
-
     @FXML
     private MFXButton botonUpdate;
-
     @FXML
     private TableView<Animal> tablaAnimales;
-
     @FXML
     private TableColumn<Animal, String> columna1;
-
     @FXML
     private TableColumn<Animal, Integer> columna2;
-
     @FXML
     private TableColumn<Animal, String> columna3;
-
     @FXML
     private TableColumn<Animal, String> columna4;
-
     @FXML
     private MFXComboBox<String> comboBox;
-
     @FXML
     private MFXTextField nombre;
-
     @FXML
     private MFXTextField edad;
-
     @FXML
     private MFXTextField id;
-
     @FXML
     private Label label;
-
     @FXML
     private MFXToggleButton toggleidioma;
 
@@ -81,14 +63,13 @@ public class PrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        sa = new ServiciosAnimales(new DaoAnimales());
         tablaAnimales.setItems(viewModel.getAnimales());
         //mapeo de los atributos a las columnas
         columna1.setCellValueFactory(new PropertyValueFactory<>("id"));
         columna2.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columna3.setCellValueFactory(new PropertyValueFactory<>("edad"));
         columna4.setCellValueFactory(new PropertyValueFactory<>("raza"));
-        comboBox.getItems().addAll(resourceBundle.getString("combo1"), resourceBundle.getString("combo2"), resourceBundle.getString("combo3"),resourceBundle.getString("combo4"));
+        comboBox.getItems().addAll(resourceBundle.getString("combo1"), resourceBundle.getString("combo2"), resourceBundle.getString("combo3"), resourceBundle.getString("combo4"));
     }
 
     @FXML
@@ -100,7 +81,6 @@ public class PrincipalController implements Initializable {
             bundle = ResourceBundle.getBundle("textosFX", Locale.getDefault());
         }
         FXMLLoader loaderMenu = new FXMLLoader(getClass().getResource("/fxml/principal.fxml"), bundle);
-
         label.setText(bundle.getString("titulo"));
         columna1.setText(bundle.getString("columnaId"));
         columna2.setText(bundle.getString("columnaNombre"));
@@ -116,7 +96,7 @@ public class PrincipalController implements Initializable {
         toggleidioma.setText(bundle.getString("idioma"));
         modooscuro.setText(bundle.getString("modooscuro"));
         comboBox.getItems().clear();
-        comboBox.getItems().addAll(bundle.getString("combo1"), bundle.getString("combo2"), bundle.getString("combo3"),bundle.getString("combo4"));
+        comboBox.getItems().addAll(bundle.getString("combo1"), bundle.getString("combo2"), bundle.getString("combo3"), bundle.getString("combo4"));
     }
 
     @FXML
@@ -127,9 +107,9 @@ public class PrincipalController implements Initializable {
             anchorPane.setStyle("-fx-background-color: #000000;");
             label.setTextFill(Color.WHITE);
             label.setStyle("-fx-background-color: #000000");
-            botonAdd.setStyle("-fx-text-fill: white; -fx-background-color: #000000;");
-            botonDelete.setStyle("-fx-text-fill: white; -fx-background-color: #000000;");
-            botonUpdate.setStyle("-fx-text-fill: white; -fx-background-color: #000000;");
+            botonAdd.setStyle("-fx-text-fill: white; -fx-background-color: #4B0082;");
+            botonDelete.setStyle("-fx-text-fill: white; -fx-background-color: #4B0082;");
+            botonUpdate.setStyle("-fx-text-fill: white; -fx-background-color: #4B0082;");
         } else {
             toggleidioma.setTextFill(Color.BLACK);
             modooscuro.setTextFill(Color.BLACK);
@@ -147,14 +127,11 @@ public class PrincipalController implements Initializable {
         if (id.getText().isEmpty() || nombre.getText().isEmpty() || edad.getText().isEmpty() || comboBox.getValue().isEmpty()) {
             alertaErrorAddAnimal();
         } else {
-            Animal p = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
-            if (sa.addAnimal(p)) {
-                tablaAnimales.getItems().add(p);
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Animal añadido correctamente");
-                alert.setHeaderText("Animal añadido correctamente");
-                alert.setContentText("Se ha añadido correctamente");
-                alert.show();
+            Animal animal = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
+            if (viewModel.getServiciosAnimales().addAnimal(animal)) {
+                tablaAnimales.getItems().add(animal);
+                alertaOKAddAnimal();
+                limpiarCampos();
             } else {
                 alertaErrorAddAnimal();
             }
@@ -163,20 +140,11 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private void deleteAnimal() {
-        if (nombre.getText().isEmpty() || edad.getText().isEmpty() || id.getText().isEmpty() || comboBox.getValue().isEmpty()) {
-            alertaErrorDeleteAnimal();
+        Animal animal = tablaAnimales.getSelectionModel().getSelectedItem();
+        if (animal != null && viewModel.getServiciosAnimales().deleteAnimal(animal)) {
+            alertaConfirmationDeleteAnimal(animal);
         } else {
-            Animal p = new Animal(id.getText(),nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
-            if (sa.deleteAnimal(p)) {
-                tablaAnimales.getItems().remove(new Animal(id.getText(),nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue()));
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Animal eliminada con éxito");
-                alert.setHeaderText("Animal eliminada con éxito");
-                alert.setContentText("Se ha eliminado correctamente");
-                alert.show();
-            } else {
-                alertaErrorDeleteAnimal();
-            }
+            alertaErrorDeleteAnimal();
         }
     }
 
@@ -185,20 +153,24 @@ public class PrincipalController implements Initializable {
         if (nombre.getText() == null || edad.getText() == null || id.getText() == null || comboBox.getValue() == null) {
             alertaErrorUpdateAnimal();
         } else {
-            Animal animal1 = new Animal(id.getText(),nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
+            Animal animal1 = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
             Animal animal2 = tablaAnimales.getSelectionModel().getSelectedItem();
-            if (sa.updateAnimal(animal1, animal2)) {
+            if (viewModel.getServiciosAnimales().updateAnimal(animal1, animal2)) {
                 tablaAnimales.getItems().remove(animal2);
                 tablaAnimales.getItems().add(animal1);
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Animal actualizado con éxito");
-                alert.setHeaderText("Animal actualizado con éxito");
-                alert.setContentText("Se ha actualizado correctamente");
-                alert.show();
+                alertaOKUpdateAnimal();
+                limpiarCampos();
             } else {
                 alertaErrorUpdateAnimal();
             }
         }
+    }
+
+    private void limpiarCampos() {
+        id.clear();
+        nombre.clear();
+        edad.clear();
+        comboBox.clear();
     }
 
     @FXML
@@ -219,6 +191,23 @@ public class PrincipalController implements Initializable {
         alert.show();
     }
 
+    private void alertaOKAddAnimal() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Animal añadido correctamente");
+        alert.setHeaderText("Animal añadido correctamente");
+        alert.setContentText("Se ha añadido correctamente");
+        alert.show();
+
+    }
+
+    private void alertaOKUpdateAnimal() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Animal actualizado con éxito");
+        alert.setHeaderText("Animal actualizado con éxito");
+        alert.setContentText("Se ha actualizado correctamente");
+        alert.show();
+    }
+
     @FXML
     private void alertaErrorUpdateAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -227,6 +216,33 @@ public class PrincipalController implements Initializable {
         alert.setContentText("Problemas al actualizar el animal");
         alert.show();
     }
+
+    private void alertaConfirmationDeleteAnimal(Animal animal) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Diálogo de Confirmación");
+        alert.setHeaderText("Diálogo confirmación");
+        alert.setContentText("Confirma el borrado de " + animal + "?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            tablaAnimales.getItems().remove(animal);
+            Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
+            alert2.setTitle("Animal eliminada con éxito");
+            alert2.setHeaderText("Animal eliminada con éxito");
+            alert2.setContentText("Se ha eliminado correctamente");
+            alert2.show();
+        }
+
+    }
+
+    private void alertaOkDeleteAnimla() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Animal eliminada con éxito");
+        alert.setHeaderText("Animal eliminada con éxito");
+        alert.setContentText("Se ha eliminado correctamente");
+        alert.show();
+    }
+
     @FXML
     private void alertaErrorDeleteAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);

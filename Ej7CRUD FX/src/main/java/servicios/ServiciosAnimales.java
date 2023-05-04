@@ -13,9 +13,9 @@ public class ServiciosAnimales {
         this.daoAnimales = daoAnimales;
     }
 
-    public boolean addAnimal(Animal p) {
-        if (!getAnimal(p)) {
-            return daoAnimales.addAnimal(p);
+    public boolean addAnimal(Animal a) {
+        if (!getAnimal(a)) {
+            return daoAnimales.addAnimal(a);
         } else {
             return false;
         }
@@ -25,21 +25,21 @@ public class ServiciosAnimales {
         return daoAnimales.getAnimales();
     }
 
-    public boolean getAnimal(Animal p) {
-        return daoAnimales.getAnimal(p);
+    public boolean getAnimal(Animal a) {
+        return daoAnimales.getAnimal(a);
     }
 
-    public boolean updateAnimal(Animal p1, Animal p2) {
-        if (daoAnimales.getAnimal(p2)) {
-            return daoAnimales.updateAnimal(p1, p2);
+    public boolean updateAnimal(Animal a1, Animal a2) {
+        if (daoAnimales.getAnimal(a2)) {
+            return daoAnimales.updateAnimal(a1, a2);
         } else {
             return false;
         }
     }
 
-    public boolean deleteAnimal(Animal p) {
-        if (daoAnimales.getAnimal(p)) {
-            return daoAnimales.eliminarAnimal(p);
+    public boolean deleteAnimal(Animal a) {
+        if (daoAnimales.getAnimal(a)) {
+            return daoAnimales.eliminarAnimal(a);
         } else {
             return false;
         }

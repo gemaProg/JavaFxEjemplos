@@ -18,11 +18,11 @@ public class MainFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        ResourceBundle r = ResourceBundle.getBundle("textosFX", Locale.getDefault());
-        FXMLLoader loaderMenu = new FXMLLoader(getClass().getResource("/fxml/principal.fxml"),r);
+        ResourceBundle rb = ResourceBundle.getBundle("textosFX", Locale.getDefault());
+        FXMLLoader loaderMenu = new FXMLLoader(getClass().getResource("/fxml/principal.fxml"),rb);
         AnchorPane root = loaderMenu.load();
         Scene scene = new Scene(root);
-        primaryStage.setTitle(r.getString("TITLE"));
+        primaryStage.setTitle(rb.getString("title"));
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setResizable(true);
