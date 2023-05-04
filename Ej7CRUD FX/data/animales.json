@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "nombre": "Río",
+    "edad": 4,
+    "raza": "Pastor Alemán"
+  },
+  {
+    "id": "3",
+    "nombre": "Perry",
+    "edad": 5,
+    "raza": "Cocker"
+  },
+  {
+    "id": "4",
+    "nombre": "Niebla",
+    "edad": 1,
+    "raza": "Mastín"
+  },
+  {
+    "id": "5",
+    "nombre": "Laila",
+    "edad": 2,
+    "raza": "Otro"
+  },
+  {
+    "id": "2",
+    "nombre": "Manchas",
+    "edad": 2,
+    "raza": "Cocker"
+  }
+]
