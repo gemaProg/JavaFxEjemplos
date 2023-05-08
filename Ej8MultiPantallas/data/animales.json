@@ -6,12 +6,6 @@
     "raza": "Cocker"
   },
   {
-    "id": "4",
-    "nombre": "Niebla",
-    "edad": 1,
-    "raza": "Mastín"
-  },
-  {
     "id": "2",
     "nombre": "Coco",
     "edad": 2,
@@ -28,5 +22,11 @@
     "nombre": "Riu",
     "edad": 4,
     "raza": "Pastor Alemán"
+  },
+  {
+    "id": "4",
+    "nombre": "Niebla",
+    "edad": 2,
+    "raza": "Mastín"
   }
 ]

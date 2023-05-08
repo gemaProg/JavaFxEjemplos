@@ -21,7 +21,7 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class PrincipalController implements Initializable {
+public class SegundaPantallaClientesController implements Initializable {
 
     private final MainViewModel viewModel;
     @FXML
@@ -58,7 +58,8 @@ public class PrincipalController implements Initializable {
     @FXML
     private MFXToggleButton modooscuro;
 
-    public PrincipalController() {
+
+    public SegundaPantallaClientesController() {
         viewModel = new MainViewModel(new ServicioAnimales(new DaoAnimales()));
     }
 
@@ -73,9 +74,7 @@ public class PrincipalController implements Initializable {
         comboBox.getItems().addAll(resourceBundle.getString("combo1"), resourceBundle.getString("combo2"), resourceBundle.getString("combo3"), resourceBundle.getString("combo4"));
         //si queremos que al seleccionar un elemento de la tabla se rellenen los textField hay que añadir un listener a la tabla para que
         //ejecute el método onEdit cada vez que ocurra..
-        tablaAnimales.setOnMouseClicked((MouseEvent event) -> {
-                        onEdit();
-        });
+        tablaAnimales.setOnMouseClicked((MouseEvent event) -> onEdit());
     }
 
     public void onEdit() {
@@ -98,7 +97,6 @@ public class PrincipalController implements Initializable {
         } else {
             bundle = ResourceBundle.getBundle("textosFX", Locale.getDefault());
         }
-        FXMLLoader loaderMenu = new FXMLLoader(getClass().getResource("/fxml/principal.fxml"), bundle);
         label.setText(bundle.getString("titulo"));
         columna1.setText(bundle.getString("columnaId"));
         columna2.setText(bundle.getString("columnaNombre"));
