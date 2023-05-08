@@ -25,8 +25,14 @@
   },
   {
     "id": "2",
-    "nombre": "coco",
-    "edad": 4,
+    "nombre": "Coco",
+    "edad": 2,
     "raza": "Pastor Alemán"
+  },
+  {
+    "id": "0",
+    "nombre": "Guau",
+    "edad": 1,
+    "raza": "Cocker"
   }
 ]

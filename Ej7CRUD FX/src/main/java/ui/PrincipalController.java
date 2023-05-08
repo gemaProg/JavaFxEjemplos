@@ -3,7 +3,7 @@ package ui;
 import dao.DaoAnimales;
 import domain.modelo.Animal;
 import javafx.scene.control.*;
-import servicios.ServiciosAnimales;
+import servicios.ServicioAnimales;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
 import io.github.palexdev.materialfx.controls.MFXTextField;
@@ -58,7 +58,7 @@ public class PrincipalController implements Initializable {
     private MFXToggleButton modooscuro;
 
     public PrincipalController() {
-        viewModel = new MainViewModel(new ServiciosAnimales(new DaoAnimales()));
+        viewModel = new MainViewModel(new ServicioAnimales(new DaoAnimales()));
     }
 
     @Override
@@ -128,7 +128,7 @@ public class PrincipalController implements Initializable {
             alertaErrorAddAnimal();
         } else {
             Animal animal = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
-            if (viewModel.getServiciosAnimales().addAnimal(animal)) {
+            if (viewModel.getServicioAnimales().addAnimal(animal)) {
                 tablaAnimales.getItems().add(animal);
                 alertaOKAddAnimal();
                 limpiarCampos();
@@ -141,8 +141,9 @@ public class PrincipalController implements Initializable {
     @FXML
     private void deleteAnimal() {
         Animal animal = tablaAnimales.getSelectionModel().getSelectedItem();
-        if (animal != null && viewModel.getServiciosAnimales().deleteAnimal(animal)) {
+        if (animal != null && viewModel.getServicioAnimales().deleteAnimal(animal)) {
             alertaConfirmationDeleteAnimal(animal);
+            alertaOkDeleteAnimal();
         } else {
             alertaErrorDeleteAnimal();
         }
@@ -155,11 +156,12 @@ public class PrincipalController implements Initializable {
         } else {
             Animal animal1 = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
             Animal animal2 = tablaAnimales.getSelectionModel().getSelectedItem();
-            if (viewModel.getServiciosAnimales().updateAnimal(animal1, animal2)) {
+            if (viewModel.getServicioAnimales().updateAnimal(animal1, animal2)) {
                 tablaAnimales.getItems().remove(animal2);
                 tablaAnimales.getItems().add(animal1);
                 alertaOKUpdateAnimal();
                 limpiarCampos();
+                tablaAnimales.refresh();
             } else {
                 alertaErrorUpdateAnimal();
             }
@@ -224,7 +226,7 @@ public class PrincipalController implements Initializable {
         alert.setContentText("Confirma el borrado de " + animal + "?");
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
+        if (result.isPresent() && result.get()== ButtonType.OK) {
             tablaAnimales.getItems().remove(animal);
             Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
             alert2.setTitle("Animal eliminada con éxito");
@@ -235,7 +237,7 @@ public class PrincipalController implements Initializable {
 
     }
 
-    private void alertaOkDeleteAnimla() {
+    private void alertaOkDeleteAnimal() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Animal eliminada con éxito");
         alert.setHeaderText("Animal eliminada con éxito");

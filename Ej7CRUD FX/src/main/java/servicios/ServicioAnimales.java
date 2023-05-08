@@ -2,14 +2,15 @@ package servicios;
 
 import dao.DaoAnimales;
 import domain.modelo.Animal;
+import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
-
-public class ServiciosAnimales {
+@Log4j2
+public class ServicioAnimales {
 
     private final DaoAnimales daoAnimales;
 
-    public ServiciosAnimales(DaoAnimales daoAnimales) {
+    public ServicioAnimales(DaoAnimales daoAnimales) {
         this.daoAnimales = daoAnimales;
     }
 
