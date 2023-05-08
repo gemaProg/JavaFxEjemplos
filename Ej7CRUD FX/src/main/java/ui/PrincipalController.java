@@ -3,6 +3,7 @@ package ui;
 import dao.DaoAnimales;
 import domain.modelo.Animal;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import servicios.ServicioAnimales;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
@@ -70,6 +71,23 @@ public class PrincipalController implements Initializable {
         columna3.setCellValueFactory(new PropertyValueFactory<>("edad"));
         columna4.setCellValueFactory(new PropertyValueFactory<>("raza"));
         comboBox.getItems().addAll(resourceBundle.getString("combo1"), resourceBundle.getString("combo2"), resourceBundle.getString("combo3"), resourceBundle.getString("combo4"));
+        //si queremos que al seleccionar un elemento de la tabla se rellenen los textField hay que añadir un listener a la tabla para que
+        //ejecute el método onEdit cada vez que ocurra..
+        tablaAnimales.setOnMouseClicked((MouseEvent event) -> {
+                        onEdit();
+        });
+    }
+
+    public void onEdit() {
+        //check si se ha seleccionado un elemento y actualiza los textField con los valores de los atributos del elemento seleccionado
+        //Con esto no haría falta la imagen de ayuda puesto que el usuario no tendría que introducirlo en los textField
+        if (tablaAnimales.getSelectionModel().getSelectedItem() != null) {
+            Animal selectedAnimal = tablaAnimales.getSelectionModel().getSelectedItem();
+            id.setText(selectedAnimal.getId());
+            nombre.setText(selectedAnimal.getNombre());
+            edad.setText(String.valueOf(selectedAnimal.getEdad()));
+            comboBox.setValue(selectedAnimal.getRaza());
+        }
     }
 
     @FXML
@@ -144,6 +162,7 @@ public class PrincipalController implements Initializable {
         if (animal != null && viewModel.getServicioAnimales().deleteAnimal(animal)) {
             alertaConfirmationDeleteAnimal(animal);
             alertaOkDeleteAnimal();
+            limpiarCampos();
         } else {
             alertaErrorDeleteAnimal();
         }
@@ -226,7 +245,7 @@ public class PrincipalController implements Initializable {
         alert.setContentText("Confirma el borrado de " + animal + "?");
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get()== ButtonType.OK) {
+        if (result.isPresent() && result.get() == ButtonType.OK) {
             tablaAnimales.getItems().remove(animal);
             Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
             alert2.setTitle("Animal eliminada con éxito");
