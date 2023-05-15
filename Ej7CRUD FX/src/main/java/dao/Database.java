@@ -15,13 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Log4j2
-
 public class Database {
 
     public List<Animal> loadAnimales() {
         Gson gson = new Gson();
         Type userListType = new TypeToken<ArrayList<Animal>>() {}.getType();
-
+        log.info("cargando animales");
         List<Animal> animals = null;
         try {
             animals = gson.fromJson(
