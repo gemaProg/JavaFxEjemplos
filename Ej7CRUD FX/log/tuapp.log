@@ -1,0 +1,32 @@
+2023-05-15 12:02:25.387 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:02:25.389 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:02:25.390 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:02:25.428 ERROR [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:02:35.304 ERROR [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:02:35.308 ERROR [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:09:17.416 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:09:17.419 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:09:17.421 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:09:17.476 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:10:39.620 ERROR [JavaFX Application Thread] javafx.application.Application - O con la anotación o con este atributo estático que carga el logger, la anotación simplifica esta tarea
+2023-05-15 12:10:39.623 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:10:39.623 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:10:39.623 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:10:39.663 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:11:47.681 INFO  [JavaFX Application Thread] javafx.application.Application - Hay dos opciones: anotación o con este atributo estático que carga el logger
+2023-05-15 12:11:47.683 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2023-05-15 12:11:47.683 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:11:47.684 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:11:47.684 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:11:47.718 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:12:24.976 INFO  [JavaFX Application Thread] javafx.application.Application - Hay dos opciones: anotación o con este atributo estático que carga el logger
+2023-05-15 12:12:24.979 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2023-05-15 12:12:24.979 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:12:24.979 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:12:24.979 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:12:25.022 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2023-05-15 12:32:00.911 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2023-05-15 12:32:00.913 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2023-05-15 12:32:00.914 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2023-05-15 12:32:00.914 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2023-05-15 12:32:00.952 INFO  [JavaFX Application Thread] dao.Database - cargando animales

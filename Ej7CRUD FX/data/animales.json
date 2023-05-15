@@ -12,21 +12,21 @@
     "raza": "Mastín"
   },
   {
-    "id": "2",
-    "nombre": "Coco",
-    "edad": 2,
-    "raza": "Pastor Alemán"
-  },
-  {
     "id": "5",
     "nombre": "Laila",
-    "edad": 3,
+    "edad": 1,
     "raza": "Otro"
   },
   {
     "id": "1",
     "nombre": "Riu",
-    "edad": 4,
+    "edad": 2,
+    "raza": "Pastor Alemán"
+  },
+  {
+    "id": "2",
+    "nombre": "Coco",
+    "edad": 3,
     "raza": "Pastor Alemán"
   }
 ]
