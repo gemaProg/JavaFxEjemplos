@@ -4,35 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb573c0f-54b9-49c7-8a86-21b9a28cfc11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Ej0/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/src/main/java/com/example/ej0/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/src/main/java/com/example/ej0/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej0/src/main/resources/com/example/ej0/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="fb573c0f-54b9-49c7-8a86-21b9a28cfc11" name="Changes" comment="Actualizando repositorio JavaFx">
+      <change afterPath="$PROJECT_DIR$/../Ej2AlertComboPromocionPeon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ej2AlertComboPromocionPeon/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ej2AlertComboPromocionPeon/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ej2AlertComboPromocionPeon/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej0/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ej0/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ej0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej1HelloWorld/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ej1HelloWorld/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/src/main/java/com/example/ej2alertcombo/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/src/main/java/com/example/ej2alertcombo/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2AlertCombo/src/main/resources/com/example/ej2alertcombo/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej6EjemploAhorcado/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ej6EjemploAhorcado/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +46,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2cEY8DCMOmi24S8Kwy34wfU3pdr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,6 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alvar/IdeaProjects/EjemplosJavaFX/Ej3GridImageView",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,11 +105,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707678046594</updated>
-      <workItem from="1707678048379" duration="800000" />
+      <workItem from="1707678048379" duration="1092000" />
+      <workItem from="1707681115509" duration="135000" />
+      <workItem from="1707681523730" duration="2312000" />
+      <workItem from="1707689362995" duration="1408000" />
     </task>
+    <task id="LOCAL-00001" summary="Actualizando repositorio JavaFx">
+      <option name="closed" value="true" />
+      <created>1707678891917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707678891917</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actualizado con ficheros Log Ej7 CRUD FX" />
+    <MESSAGE value="Actualizando repositorio JavaFx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizando repositorio JavaFx" />
   </component>
 </project>
