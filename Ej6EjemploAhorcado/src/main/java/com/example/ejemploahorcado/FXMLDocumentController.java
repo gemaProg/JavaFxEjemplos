@@ -44,15 +44,16 @@ public class FXMLDocumentController implements Initializable {
                 pane = new Pane();
                 if (i * 8 + j < 26) {
                     if (j % 2 == 0 && i % 2 == 0 || j % 2 != 0 && i % 2 != 0) {
-                        pane.setStyle("-fx-background-color: #07244f;");
+                        pane.setStyle("-fx-background-color: #07004f;");
                     } else {
                         pane.setStyle("-fx-background-color: #081d3d");
                     }
                     Label letra = new Label(String.valueOf(caracter));
                     letra.setTextFill(Color.web("#ffffff"));
+                    //letra.setTextFill(Color.WHITE);
                     pane.getChildren().addAll(letra);
-                    letra.layoutXProperty().bind(pane.widthProperty().subtract(letra.widthProperty()).divide(2));
-                    letra.layoutYProperty().bind(pane.heightProperty().subtract(letra.heightProperty()).divide(2));
+                    letra.layoutXProperty().bind(pane.widthProperty().subtract(letra.widthProperty()).divide(3));
+                    letra.layoutYProperty().bind(pane.heightProperty().subtract(letra.heightProperty()).divide(3));
                     mainGrid.add(pane, j, i);
                     String message = "Click on cell [" + i + ", " + j + "]";
                     int fila = i;
