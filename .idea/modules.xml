@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ej7CRUD FX/CRUDFX.iml" filepath="$PROJECT_DIR$/Ej7CRUD FX/CRUDFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej8MultiPantallas/CRUDFX (1).iml" filepath="$PROJECT_DIR$/Ej8MultiPantallas/CRUDFX (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej1HelloWorld/Ej1HelloWorld.iml" filepath="$PROJECT_DIR$/Ej1HelloWorld/Ej1HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej2AlertCombo/Ej2AlertCombo.iml" filepath="$PROJECT_DIR$/Ej2AlertCombo/Ej2AlertCombo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej3GridImageView/Ej3GridImageView.iml" filepath="$PROJECT_DIR$/Ej3GridImageView/Ej3GridImageView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej4Localizacion/Ej4Localizacion.iml" filepath="$PROJECT_DIR$/Ej4Localizacion/Ej4Localizacion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej6EjemploAhorcado/EjemploAhorcado.iml" filepath="$PROJECT_DIR$/Ej6EjemploAhorcado/EjemploAhorcado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EjemplosJavaFX.iml" filepath="$PROJECT_DIR$/.idea/EjemplosJavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ej5dataFakeJavaFx/javafxFaker2.iml" filepath="$PROJECT_DIR$/Ej5dataFakeJavaFx/javafxFaker2.iml" />
+    </modules>
+  </component>
+</project>
