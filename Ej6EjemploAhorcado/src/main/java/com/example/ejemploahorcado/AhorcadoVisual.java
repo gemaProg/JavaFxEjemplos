@@ -13,7 +13,7 @@ public class AhorcadoVisual extends Application {
     @Override
     public void start(Stage stage)  {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+           // Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(AhorcadoVisual.class.getResource("FXMLDocument.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             stage.setScene(scene);
