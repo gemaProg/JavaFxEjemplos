@@ -1,11 +1,5 @@
 [
   {
-    "id": "3",
-    "nombre": "Perry",
-    "edad": 5,
-    "raza": "Cocker"
-  },
-  {
     "id": "4",
     "nombre": "Niebla",
     "edad": 1,
@@ -28,5 +22,11 @@
     "nombre": "Coco",
     "edad": 3,
     "raza": "Pastor Alemán"
+  },
+  {
+    "id": "3",
+    "nombre": "Perry",
+    "edad": 5,
+    "raza": "Cocker"
   }
 ]
