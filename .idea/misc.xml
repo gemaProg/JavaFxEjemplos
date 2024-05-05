@@ -12,8 +12,13 @@
         <option value="$PROJECT_DIR$/Ej5dataFakeJavaFx/pom.xml" />
         <option value="$PROJECT_DIR$/Ej8MultiPantallas/pom.xml" />
         <option value="$PROJECT_DIR$/Ej6EjemploAhorcado/pom.xml" />
+        <option value="$PROJECT_DIR$/Ej7CRUDFX/pom.xml" />
+        <option value="$PROJECT_DIR$/Ej00/pom.xml" />
+        <option value="$PROJECT_DIR$/Ej0/pom.xml" />
+        <option value="$PROJECT_DIR$/Ej2AlertComboPromocionPeon/pom.xml" />
       </list>
     </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK" />
 </project>

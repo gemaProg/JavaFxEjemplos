@@ -11,13 +11,12 @@ public class MainViewModel {
     private final ObservableList<Animal> animals;
 
     private MainViewModel() {
-        servicioAnimales = new ServicioAnimales(new DaoAnimales());
-        animals = FXCollections.observableArrayList(servicioAnimales.getAnimales());
+        this(new ServicioAnimales(new DaoAnimales()));
     }
 
     public MainViewModel(ServicioAnimales servicioAnimales) {
         this.servicioAnimales = servicioAnimales;
-        animals = FXCollections.observableArrayList(servicioAnimales.getAnimales());
+        animals = FXCollections.observableArrayList(this.servicioAnimales.getAnimales());
 
     }
     public ObservableList<Animal> getAnimales() {

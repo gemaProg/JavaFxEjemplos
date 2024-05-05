@@ -1,4 +1,4 @@
-module com.example.javafxfaker2 {
+module com.example.dataFakerGenerator {
     requires javafx.controls;
     requires javafx.fxml;
     requires datafaker;

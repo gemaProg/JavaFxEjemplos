@@ -59,6 +59,7 @@ public class PrincipalController implements Initializable {
     private MFXToggleButton modooscuro;
 
     public PrincipalController() {
+        System.out.println("hola");
         viewModel = new MainViewModel(new ServicioAnimales(new DaoAnimales()));
     }
 

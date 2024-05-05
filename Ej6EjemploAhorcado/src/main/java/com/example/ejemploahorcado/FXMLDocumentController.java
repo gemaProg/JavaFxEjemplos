@@ -114,7 +114,7 @@ public class FXMLDocumentController implements Initializable {
             if (!adivinar.contains(letra_pulsada.toLowerCase())) {
                 estado++;
                 fallos.setText("Fallos: " + estado + "/7");
-                imagen.setImage(new Image("File:src/main/resources/com/example/ejemploahorcado/images/" + estado + ".png"));
+                imagen.setImage(new Image("File:Ej6EjemploAhorcado/src/main/resources/com/example/ejemploahorcado/images/" + estado + ".png"));
             }
         }
         if (estado == 7)

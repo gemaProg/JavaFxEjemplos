@@ -30,7 +30,8 @@ public class MainFX extends Application {
         log.error("Mensaje de nivel de error");
         ResourceBundle rb = ResourceBundle.getBundle("textosFX", Locale.getDefault());
         FXMLLoader loaderMenu = new FXMLLoader(getClass().getResource("/fxml/principal.fxml"),rb);
-        AnchorPane root = loaderMenu.load();
+        AnchorPane root = null;
+        root = loaderMenu.load();
         Scene scene = new Scene(root);
         primaryStage.setTitle(rb.getString("title"));
         primaryStage.setScene(scene);
