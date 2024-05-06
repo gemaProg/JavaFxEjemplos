@@ -10,6 +10,7 @@ public class Animal {
     private final int edad;
     private final String raza;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -17,7 +18,6 @@ public class Animal {
         Animal animal = (Animal) o;
         return Objects.equals(id, animal.id);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(nombre);

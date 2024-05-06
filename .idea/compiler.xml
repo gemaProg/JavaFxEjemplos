@@ -13,14 +13,15 @@
         <module name="Ej1HelloWorld" />
         <module name="Ej3GridImageView" />
         <module name="Ej4Localizacion" />
+        <module name="CRUDFX (1)" />
         <module name="Ej0" />
         <module name="Ej2AlertComboPromocionPeon" />
         <module name="Ej2AlertCombo" />
         <module name="EjemploAhorcado" />
-        <module name="CRUDFX" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CRUDFX" target="17" />
       <module name="Ej2AlertCombo" target="19" />
     </bytecodeTargetLevel>
   </component>

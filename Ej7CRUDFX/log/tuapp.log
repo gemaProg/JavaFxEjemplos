@@ -53,3 +53,33 @@
 2024-05-05 22:34:57.997 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
 2024-05-05 22:34:57.997 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
 2024-05-05 22:34:58.038 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:47:39.365 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 12:47:39.367 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 12:47:39.367 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 12:47:39.367 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 12:47:39.446 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:52:41.321 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:52:41.323 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:53:28.786 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:53:28.792 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:53:37.752 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:53:37.758 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:53:56.769 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:54:33.700 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 12:54:33.702 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 12:54:33.702 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 12:54:33.702 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 12:54:33.735 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:31:39.654 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:31:39.656 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:32:09.505 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:32:09.511 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:45:01.577 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:45:01.583 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:50:25.907 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:50:25.913 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 13:51:24.125 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 13:51:24.127 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 13:51:24.127 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 13:51:24.127 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 13:51:24.180 INFO  [JavaFX Application Thread] dao.Database - cargando animales

@@ -59,7 +59,6 @@ public class PrincipalController implements Initializable {
     private MFXToggleButton modooscuro;
 
     public PrincipalController() {
-        System.out.println("hola");
         viewModel = new MainViewModel(new ServicioAnimales(new DaoAnimales()));
     }
 
@@ -171,7 +170,7 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private void updateAnimal() {
-        if (nombre.getText() == null || edad.getText() == null || id.getText() == null || comboBox.getValue() == null) {
+        if (id.getText().isEmpty() || nombre.getText().isEmpty() || edad.getText().isEmpty() || comboBox.getValue().isEmpty()) {
             alertaErrorUpdateAnimal();
         } else {
             Animal animal1 = new Animal(id.getText(), nombre.getText(), Integer.parseInt(edad.getText()), comboBox.getValue());
@@ -204,7 +203,7 @@ public class PrincipalController implements Initializable {
         a.show();
     }
 
-    @FXML
+
     private void alertaErrorAddAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -230,7 +229,7 @@ public class PrincipalController implements Initializable {
         alert.show();
     }
 
-    @FXML
+
     private void alertaErrorUpdateAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -265,7 +264,7 @@ public class PrincipalController implements Initializable {
         alert.show();
     }
 
-    @FXML
+
     private void alertaErrorDeleteAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");

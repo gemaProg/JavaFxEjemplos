@@ -1,26 +1,32 @@
 [
   {
-    "id": "4",
-    "nombre": "Niebla",
-    "edad": 1,
-    "raza": "Mastín"
-  },
-  {
-    "id": "1",
-    "nombre": "Riu",
-    "edad": 2,
-    "raza": "Pastor Alemán"
-  },
-  {
-    "id": "6",
-    "nombre": "1",
-    "edad": 1,
-    "raza": "Mastín"
-  },
-  {
     "id": "3",
     "nombre": "Perry",
     "edad": 6,
     "raza": "Cocker"
+  },
+  {
+    "id": "4",
+    "nombre": "Niebla",
+    "edad": 10,
+    "raza": "Mastín"
+  },
+  {
+    "id": "5",
+    "nombre": "rastreator",
+    "edad": 2,
+    "raza": "Other"
+  },
+  {
+    "id": "8",
+    "nombre": "asdf",
+    "edad": 2,
+    "raza": "German shepherd"
+  },
+  {
+    "id": "1",
+    "nombre": "Riu",
+    "edad": 3,
+    "raza": "Pastor Alemán"
   }
 ]
